@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function MainSection() {
   return (
     <section className="h-screen bg-layout">
-      <Navbar />
       <div className="flex justify-between px-8">
         <div>
           <p className="sm:text-124 text-30 font-medium tracking-tight">
