@@ -1,0 +1,34 @@
+:root {
+  /* 배경컬러 */
+  --bg-layout: #f8fafc;
+  --bg-primary: #000;
+  --bg-secondary: #;
+  --bg-secondary: #fff;
+
+  /* 폰트 사이즈 */
+  --font-size-68: 4.25rem;
+  --font-size-48: 3rem;
+  --font-size-50: 3.125rem;
+  --font-size-45: 2.8125rem;
+  --font-size-42: 2.625rem;
+  --font-size-36: 2.25rem;
+  --font-size-32: 2rem;
+  --font-size-30: 1.875rem;
+  --font-size-28: 1.75rem;
+  --font-size-24: 1.5rem;
+  --font-size-22: 1.375rem;
+  --font-size-20: 1.25rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+  --font-size-15: 0.9375rem;
+  --font-size-14: 0.875rem;
+  --font-size-12: 0.75rem;
+  --font-size-10: 0.625rem;
+
+  /* 폰트 굵기 */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+}
