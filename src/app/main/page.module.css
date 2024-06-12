@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  height: calc(100vh - 96px);
+  overflow: hidden;
+}
+
+.text {
+  font-size: var(-font-size-120);
+  font-weight: var(--font-semibold);
+  line-height: 0.9;
+}
+
+.text span {
+  display: inline-block;
+}
+
+.name-text {
+  font-weight: var(--font-medium);
+  padding-bottom: 15px;
+}
+
+@media (min-width: 640px) {
+  .text {
+    font-size: 7.75rem;
+  }
+}
+
+.image {
+  margin-top: 2rem;
+}
+
+.name-text {
+  font-size: 7.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (min-width: 640px) {
+  .name-text {
+    font-size: 6rem;
+  }
+}

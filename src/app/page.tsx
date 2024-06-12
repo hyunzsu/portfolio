@@ -1,9 +1,9 @@
-import MainSection from './_sections/MainSection';
+import Main from "./main/page";
 
 export default function Home() {
   return (
-    <main className=''>
-      <MainSection />
-    </main>
+    <section className="">
+      <Main />
+    </section>
   );
 }
