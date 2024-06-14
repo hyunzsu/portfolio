@@ -53,13 +53,11 @@ button {
   cursor: pointer;
 }
 
-/* Desktop container utility class: */
-.container {
-  /* max-width: 1536px; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* padding-left: 0.5rem; */
-  /* padding-right: 0.5rem; */
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 /* xl */
@@ -87,5 +85,12 @@ button {
 @media (max-width: 640px) {
   .container {
     max-width: 640px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
   }
 }

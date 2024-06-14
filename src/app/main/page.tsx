@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function Main() {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.inner}>
         <p className={styles.text}>
           <span>FRONTED</span>
           <br />
@@ -14,8 +14,8 @@ export default function Main() {
           className={styles.image}
           src="/hyunzsu-photo.svg"
           alt="내 사진"
-          width={550}
-          height={280}
+          width={700}
+          height={350}
         />
       </div>
       <div className={styles["name-text"]}>hyunzsu</div>

@@ -6,10 +6,11 @@
   --bg-secondary: #fff;
 
   /* 폰트 사이즈 */
+  --font-size-144: 9rem;
   --font-size-120: 7.5rem;
   --font-size-68: 4.25rem;
-  --font-size-48: 3rem;
   --font-size-50: 3.125rem;
+  --font-size-48: 3rem;
   --font-size-45: 2.8125rem;
   --font-size-42: 2.625rem;
   --font-size-36: 2.25rem;
