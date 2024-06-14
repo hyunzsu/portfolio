@@ -1,5 +1,5 @@
 .header {
-  padding: 1.5rem 2.5rem;
+  padding: 2rem 4rem;
   font-family: "Montserrat", sans-serif;
   position: relative;
 }
@@ -17,7 +17,7 @@
 }
 
 .logo {
-  font-size: var(--font-size-48);
+  font-size: var(--font-size-68);
   font-weight: var(--font-bold);
   margin-right: 25px;
 }
@@ -29,11 +29,12 @@
 }
 
 .link {
+  font-size: var(--font-size-20);
   display: flex;
   align-items: center;
   border: 1px solid var(--bg-primary);
   border-radius: 30px;
-  padding: 10px 15px;
+  padding: 12px 20px;
 }
 
 .nav {
@@ -48,6 +49,10 @@
 
 .link-item {
   display: none;
+}
+
+.button {
+  font-size: var(--font-size-24);
 }
 
 .hamburger-menu {
@@ -110,6 +115,25 @@
   z-index: 999;
 }
 
+@media screen and (max-width: 1536px) {
+  .header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .button {
+    font-size: var(--font-size-20);
+  }
+
+  .logo {
+    font-size: var(--font-size-48);
+  }
+
+  .link {
+    font-size: var(--font-size-16);
+    padding: 10px 15px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     padding: 1rem 2rem;
@@ -148,9 +172,6 @@
   .hamburger-menu {
     display: block;
   }
-}
-
-@media screen and (max-width: 640px) {
   .link-container {
     display: none;
   }
