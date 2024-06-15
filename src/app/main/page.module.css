@@ -32,13 +32,11 @@
   }
 
   .text {
-    /* font-size: 8.5vw; */
     font-size: var(--font-size-120);
     margin-bottom: 20px;
   }
 
   .name-text {
-    /* font-size: 8.5vw; */
     font-size: var(--font-size-120);
     padding-bottom: 20px;
   }
@@ -78,11 +76,18 @@
 }
 
 @media screen and (max-width: 640px) {
+  .text {
+    font-size: 8vw;
+  }
+
+  .name-text {
+    font-size: 8vw;
+  }
 }
 
 @media screen and (max-width: 475px) {
   .image {
-    width: 300px;
-    height: 150px;
+    width: 270px;
+    height: 135px;
   }
 }
