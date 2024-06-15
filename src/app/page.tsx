@@ -1,11 +1,9 @@
-import AboutSection from "./_sections/AboutSection";
-import MainSection from "./_sections/MainSection";
+import Main from "./main/page";
 
 export default function Home() {
   return (
-    <main>
-      <MainSection />
-      <AboutSection />
-    </main>
+    <section className="container">
+      <Main />
+    </section>
   );
 }
