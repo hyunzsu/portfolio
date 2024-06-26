@@ -1,0 +1,9 @@
+.li {
+  margin-bottom: 0.625rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .li {
+    margin-bottom: 0.5rem;
+  }
+}

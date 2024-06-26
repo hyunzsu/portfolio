@@ -53,6 +53,10 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
 /* 2xl */
 @media (max-width: 1536px) {
   .container {
