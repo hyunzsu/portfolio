@@ -3,14 +3,15 @@ import styles from "./page.module.css";
 import Title from "@/components/UI/Title/Title";
 import List from "@/components/UI/List/List";
 import { getAboutData } from "@/app/api/supabaseClient";
+import { Experience, License, Education, Skill } from "@/types/about";
 
 export default async function About() {
-  const {
-    experiences = [],
-    licenses = [],
-    educations = [],
-    skills = [],
-  } = await getAboutData();
+  const data = await getAboutData();
+
+  const experiences: Experience[] = data.experiences || [];
+  const licenses: License[] = data.licenses || [];
+  const educations: Education[] = data.educations || [];
+  const skills: Skill[] = data.skills || [];
 
   return (
     <div className={styles.container}>
