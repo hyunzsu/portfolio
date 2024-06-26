@@ -3,7 +3,13 @@ import styles from "./page.module.css";
 import Title from "@/components/UI/Title/Title";
 import List from "@/components/UI/List/List";
 import { getAboutData } from "@/app/api/supabaseClient";
-import { Experience, License, Education, Skill } from "@/types/about";
+import {
+  Experience,
+  License,
+  Education,
+  Skill,
+  AboutData,
+} from "@/types/about";
 
 export default async function About() {
   const data = await getAboutData();
@@ -35,14 +41,14 @@ export default async function About() {
         <article className={styles.article}>
           <Title title="Experience" className={styles.h2} />
           <List
-            items={experiences.map((experience) => (
+            items={experiences.map((experience: Experience) => (
               <div key={experience.id} className={styles.experience}>
                 <p className={styles.itemHeader}>
                   <span className={styles.h3}>{experience.company}</span>
                   <span className={styles.period}>{experience.period}</span>
                 </p>
                 <List
-                  items={experience.description.map((desc) => (
+                  items={experience.description.map((desc: string) => (
                     <span key={desc} className={styles["li-text"]}>
                       {desc}
                     </span>
@@ -56,7 +62,7 @@ export default async function About() {
         <article className={styles.article}>
           <Title title="License" className={styles.h2} />
           <List
-            items={licenses.map((license) => (
+            items={licenses.map((license: License) => (
               <div key={license.id} className={styles.license}>
                 <span className={styles["li-text"]}>{license.name}</span>
                 <span className={styles.period}>{license.date}</span>
@@ -68,14 +74,14 @@ export default async function About() {
         <article className={styles.article}>
           <Title title="Education" className={styles.h2} />
           <List
-            items={educations.map((education) => (
+            items={educations.map((education: Education) => (
               <div key={education.id} className={styles.education}>
                 <p className={styles.itemHeader}>
                   <span className={styles.h3}>{education.school}</span>
                   <span className={styles.period}>{education.period}</span>
                 </p>
                 <List
-                  items={education.description.map((desc) => (
+                  items={education.description.map((desc: string) => (
                     <span key={desc} className={styles["li-text"]}>
                       {desc}
                     </span>
@@ -89,13 +95,13 @@ export default async function About() {
         <article className={styles.article}>
           <Title title="Skills" className={styles.h2} />
           <List
-            items={skills.map((skill) => (
+            items={skills.map((skill: Skill) => (
               <div key={skill.id} className={styles.skills}>
                 <p className={`${styles.h3} ${styles["skills-name"]}`}>
                   {skill.name}
                 </p>
                 <List
-                  items={skill.description.map((desc) => (
+                  items={skill.description.map((desc: string) => (
                     <span key={desc} className={styles["li-text"]}>
                       {desc}
                     </span>
