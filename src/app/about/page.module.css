@@ -1,6 +1,6 @@
 .container {
   background-color: var(--bg-primary);
-  padding: 5% 10%;
+  padding: 5% 15%;
   color: white;
 }
 
@@ -28,6 +28,7 @@
 
 .content {
   display: grid;
+  border-top: 1px solid white;
 }
 
 .article {
@@ -97,6 +98,12 @@
 
 .skills-name {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1536px) {
+  .container {
+    padding: 5% 10%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
