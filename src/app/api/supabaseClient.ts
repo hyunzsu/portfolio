@@ -20,3 +20,17 @@ export async function getAboutData() {
 
   return { experiences, licenses, educations, skills };
 }
+
+export async function getProjectData() {
+  const { data: projects, error } = await supabase
+    .from("projects")
+    .select("*")
+    .order("intro", { ascending: true });
+
+  if (error) {
+    console.error("Error fetching project data:", error);
+    return null;
+  }
+
+  return projects;
+}
