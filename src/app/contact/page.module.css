@@ -1,0 +1,26 @@
+.container {
+  /* padding: 300px 10%; */
+}
+
+.content {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 6rem;
+  margin-bottom: 6rem;
+}
+
+.logo {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-bold);
+  margin-bottom: 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: var(--font-size-14);
+}
