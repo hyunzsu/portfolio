@@ -2,8 +2,13 @@ import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 import StackTag from "../StackTag/StackTag";
 import TypeTag from "../TypeTag/TypeTag";
+import { Project } from "../../../types/project";
 
-export default function ProjectCard({ project }) {
+interface ProjectCardProps {
+  project: Project;
+}
+
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={styles.article}>
       <div className={styles["image-container"]}>
@@ -43,7 +48,11 @@ export default function ProjectCard({ project }) {
         <div className={styles.set}>
           <div>
             {project.github_url && (
-              <a target="_blank" href={project.github_url}>
+              <a
+                target="_blank"
+                href={project.github_url}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/icons/github.svg"
                   alt="깃허브 아이콘"
@@ -59,7 +68,11 @@ export default function ProjectCard({ project }) {
           </div>
           <div>
             {project.service_url && (
-              <a target="_blank" href={project.service_url}>
+              <a
+                target="_blank"
+                href={project.service_url}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/icons/deploy.svg"
                   alt="서비스 아이콘"
