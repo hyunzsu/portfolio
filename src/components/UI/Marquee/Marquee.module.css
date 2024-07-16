@@ -1,0 +1,31 @@
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 12rem;
+  margin-bottom: 3rem;
+}
+
+.marqueeContent {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 50s linear infinite;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3rem 2rem;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-120);
+  font-weight: var(--font-bold);
+  padding-right: 10rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
