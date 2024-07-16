@@ -16,6 +16,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles["header-container"]}>
         <div className={styles["first-inner"]}>
+          <div></div>
           <Link href="/" className={styles.logo}>
             H.
           </Link>
@@ -41,6 +42,15 @@ export default function Navbar() {
           </div>
         </div>
         <ul className={`${styles.nav} ${menuOpen ? styles.show : ""}`}>
+          <li>
+            <button className={styles.button}>About</button>
+          </li>
+          <li>
+            <button className={styles.button}>Projects</button>
+          </li>
+          <li>
+            <button className={styles.button}>Contact</button>
+          </li>
           <li className={styles["link-item"]}>
             <a
               href="/"
@@ -62,15 +72,6 @@ export default function Navbar() {
               <span>Resume</span>
               <TfiArrowTopRight />
             </a>
-          </li>
-          <li>
-            <button className={styles.button}>About</button>
-          </li>
-          <li>
-            <button className={styles.button}>Projects</button>
-          </li>
-          <li>
-            <button className={styles.button}>Contact</button>
           </li>
         </ul>
         <div
