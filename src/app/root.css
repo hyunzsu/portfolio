@@ -4,6 +4,7 @@
   --bg-primary: #000;
   --bg-secondary: #;
   --bg-secondary: #fff;
+  --bg-layout-rgb: 255, 255, 255;
 
   /* 폰트 사이즈 */
   --font-size-144: 9rem;

@@ -1,27 +1,26 @@
 .container {
-  padding: 5% 0;
+  padding: 5% 4rem;
   max-width: 96rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 .h1 {
   font-family: "Montserrat", sans-serif;
-  /* font-size: clamp(3.5rem, 2.3571rem + 5.5143vw, 10.5rem); */
-  font-size: var(--font-size-72);
+  font-size: var(--font-size-68);
   font-weight: var(--font-bold);
 }
 
 .h1-sub {
   display: inline-block;
-  margin-top: 1.8rem;
-  font-size: var(--font-size-24);
+  margin: 1.2rem 0;
+  font-size: var(--font-size-20);
   font-weight: var(--font-light);
 }
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1024px) {
   .container {
-    padding: 5% 10%;
+    padding: 5% 4%;
   }
 }
 

@@ -21,14 +21,14 @@
 .name-text {
   font-size: 7.5vw;
   font-weight: var(--font-medium);
-  padding-bottom: 60px;
+  padding-bottom: 3rem;
   display: flex;
   align-items: flex-end;
 }
 
 @media screen and (max-width: 1536px) {
   .container {
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem 0;
   }
 
   .text {
@@ -38,7 +38,7 @@
 
   .name-text {
     font-size: var(--font-size-120);
-    padding-bottom: 20px;
+    padding-bottom: 1.8rem;
   }
 
   .image {

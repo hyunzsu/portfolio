@@ -29,3 +29,15 @@
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .text {
+    font-size: 10.42vw;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .text {
+    font-size: 17.78vw;
+  }
+}
