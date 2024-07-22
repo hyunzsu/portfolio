@@ -40,63 +40,72 @@ export default async function About() {
 
         <article className={styles.article}>
           <Title title="Experience" className={styles.h2} />
-          <List
-            items={experiences.map((experience: Experience) => (
-              <div key={experience.id} className={styles.experience}>
-                <p className={styles.itemHeader}>
-                  <span className={styles.h3}>{experience.company}</span>
-                  <span className={styles.period}>{experience.period}</span>
-                </p>
-                <List
-                  items={experience.description.map((desc: string) => (
-                    <span key={desc} className={styles["li-text"]}>
-                      {desc}
-                    </span>
-                  ))}
-                />
-              </div>
-            ))}
-          />
+          <div className={styles["experience-container"]}>
+            <List
+              items={experiences.map((experience: Experience) => (
+                <div key={experience.id} className={styles.experience}>
+                  <p className={styles.itemHeader}>
+                    <span className={styles.h3}>{experience.company}</span>
+                    <span className={styles.period}>{experience.period}</span>
+                  </p>
+                  <List
+                    items={experience.description.map((desc: string) => (
+                      <span key={desc} className={styles["li-text"]}>
+                        {desc}
+                      </span>
+                    ))}
+                  />
+                </div>
+              ))}
+            />
+          </div>
         </article>
 
         <article className={styles.article}>
           <Title title="License" className={styles.h2} />
-          <List
-            items={licenses.map((license: License) => (
-              <div key={license.id} className={styles.license}>
-                <span className={styles["li-text"]}>{license.name}</span>
-                <span className={styles.period}>{license.date}</span>
-              </div>
-            ))}
-          />
+          <div className={styles["license-container"]}>
+            <List
+              items={licenses.map((license: License) => (
+                <div key={license.id} className={styles.license}>
+                  <span className={styles["li-text"]}>{license.name}</span>
+                  <span className={styles.period}>{license.date}</span>
+                </div>
+              ))}
+            />
+          </div>
         </article>
 
         <article className={styles.article}>
           <Title title="Education" className={styles.h2} />
-          <List
-            items={educations.map((education: Education) => (
-              <div key={education.id} className={styles.education}>
-                <p className={styles.itemHeader}>
-                  <span className={styles.h3}>{education.school}</span>
-                  <span className={styles.period}>{education.period}</span>
-                </p>
-                <List
-                  items={education.description.map((desc: string) => (
-                    <span key={desc} className={styles["li-text"]}>
-                      {desc}
-                    </span>
-                  ))}
-                />
-              </div>
-            ))}
-          />
+          <div className={styles["education-container"]}>
+            <List
+              items={educations.map((education: Education) => (
+                <div key={education.id} className={styles.education}>
+                  <p className={styles.itemHeader}>
+                    <span className={styles.h3}>{education.school}</span>
+                    <span className={styles.period}>{education.period}</span>
+                  </p>
+                  <List
+                    items={education.description.map((desc: string) => (
+                      <span key={desc} className={styles["li-text"]}>
+                        {desc}
+                      </span>
+                    ))}
+                  />
+                </div>
+              ))}
+            />
+          </div>
         </article>
 
         <article className={styles.article}>
-          <Title title="Skills" className={styles.h2} />
-          <List
-            items={skills.map((skill: Skill) => (
-              <div key={skill.id} className={styles.skills}>
+          <Title
+            title="Skills"
+            className={`${styles.h2} ${styles["skill-article"]}`}
+          />
+          <div className={styles["skill-grid"]}>
+            {skills.map((skill: Skill) => (
+              <div key={skill.id} className={styles["skill-box"]}>
                 <p className={`${styles.h3} ${styles["skills-name"]}`}>
                   {skill.name}
                 </p>
@@ -109,7 +118,7 @@ export default async function About() {
                 />
               </div>
             ))}
-          />
+          </div>
         </article>
       </div>
     </div>

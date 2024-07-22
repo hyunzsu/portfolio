@@ -33,14 +33,14 @@
 
 .article {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 2fr;
   border-bottom: 1px solid white;
-  padding: 3rem 0;
 }
 
 .h2 {
   font-size: var(--font-size-42);
-  margin-top: 3rem;
+  border-right: 1px solid white;
+  padding: 3.5rem 5rem;
 }
 
 .h3 {
@@ -50,19 +50,21 @@
 }
 
 .bio-text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-20);
   line-height: 1.5;
+  padding: 2rem;
 }
 
 .itemHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
 }
 
 .li-text {
-  font-size: 1.25rem;
+  font-size: var(--font-size-20);
   line-height: 1.5;
   position: relative;
   padding-left: 1.5rem;
@@ -84,10 +86,13 @@
   font-size: 1.25rem;
 }
 
-.experience,
-.education,
-.skills {
-  padding: 1rem 0;
+.experience-container,
+.education-container {
+  padding: 0 2rem 1.375rem 2rem;
+}
+
+.license-container {
+  padding: 2rem 2rem 1.375rem 2rem;
 }
 
 .license {
@@ -96,8 +101,61 @@
   align-items: center;
 }
 
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skill-box {
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
+
+/* 첫 번째 스킬 박스 스타일 */
+.skill-grid > div:nth-child(1) {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.skill-grid > div:nth-child(1) .skills-name::before {
+  display: inline-block;
+  content: url("/icons/nextjs-icon.svg");
+  margin-right: 8px;
+}
+
+/* 두 번째 스킬 박스 스타일 */
+.skill-grid > div:nth-child(2) {
+  border-bottom: 1px solid white;
+}
+
+.skill-grid > div:nth-child(2) .skills-name::before {
+  display: inline-block;
+  content: url("/icons/react-icon.svg");
+  margin-right: 8px;
+}
+
+/* 세 번째 스킬 박스 스타일 */
+.skill-grid > div:nth-child(3) {
+  border-right: 1px solid white;
+}
+
+.skill-grid > div:nth-child(3) .skills-name::before {
+  display: inline-block;
+  content: url("/icons/html5-icon.svg");
+  margin-right: 8px;
+}
+
+/* 네 번째 스킬 박스 스타일 */
+.skill-grid > div:nth-child(4) .skills-name::before {
+  display: inline-block;
+  content: url("/icons/typescript-icon.svg");
+  margin-right: 8px;
+}
+
 .skills-name {
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-bold);
 }
 
 @media screen and (max-width: 1536px) {
@@ -106,7 +164,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .container {
     padding: 5% 4%;
   }
@@ -130,10 +188,13 @@
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 1rem;
+    padding: 0;
+    border-right: 0;
   }
 
   .bio-text {
     font-size: 1.125rem;
+    padding: 0;
   }
 
   .h3 {
@@ -153,6 +214,43 @@
   .education,
   .skills {
     padding: 0.8rem 0;
+  }
+
+  .itemHeader {
+    margin-top: 0;
+  }
+
+  .experience-container,
+  .education-container,
+  .license-container {
+    padding: 0;
+  }
+
+  .skill-box {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill-box {
+    padding: 0.8rem 0;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-grid > div:nth-child(1) {
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .skill-grid > div:nth-child(2) {
+    border-bottom: 0;
+  }
+
+  .skill-grid > div:nth-child(3) {
+    border-right: 0;
   }
 }
 
