@@ -22,7 +22,7 @@ export default function Navbar() {
           </Link>
           <div className={styles["link-container"]}>
             <a
-              href="/"
+              href="https://github.com/hyunzsu"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
@@ -31,7 +31,7 @@ export default function Navbar() {
               <TfiArrowTopRight />
             </a>
             <a
-              href="/"
+              href="https://www.rallit.com/resumes/36530@kkkm5169/%ED%98%84%EC%A7%80%EC%88%98"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
@@ -43,13 +43,19 @@ export default function Navbar() {
         </div>
         <ul className={`${styles.nav} ${menuOpen ? styles.show : ""}`}>
           <li>
-            <button className={styles.button}>About</button>
+            <a href="#about" className={styles.button}>
+              About
+            </a>
           </li>
           <li>
-            <button className={styles.button}>Projects</button>
+            <a href="#projects" className={styles.button}>
+              projects
+            </a>
           </li>
           <li>
-            <button className={styles.button}>Contact</button>
+            <a href="#contact" className={styles.button}>
+              contact
+            </a>
           </li>
           <li className={styles["link-item"]}>
             <a

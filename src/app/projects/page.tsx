@@ -8,7 +8,7 @@ export default async function Projects() {
   console.log("getProjectData", projects);
 
   return (
-    <div className={styles.container}>
+    <div id="projects" className={styles.container}>
       <div>
         <h1 className={styles.h1}>Projects</h1>
         <span className={styles["h1-sub"]}>

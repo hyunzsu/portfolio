@@ -20,11 +20,8 @@ export default async function About() {
   const skills: Skill[] = data.skills || [];
 
   return (
-    <div className={styles.container}>
-      <div className={styles["h1-wrapper"]}>
-        <span>GET TO</span>
-        <span className={styles.h1}>KNOW ME</span>
-      </div>
+    <div id="about" className={styles.container}>
+      <h1 className={styles.h1}>About Me</h1>
 
       <div className={styles.content}>
         <article className={styles.article}>

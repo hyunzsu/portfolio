@@ -1,9 +1,6 @@
 .container {
   padding: 5% 4rem;
-  /* max-width: 96rem; */
   background-color: var(--bg-primary);
-  /* margin-left: auto; */
-  /* margin-right: auto; */
 }
 
 .h1 {
@@ -44,7 +41,8 @@
   }
 
   .h1 {
-    font-size: var(--font-size-56);
+    text-align: start;
+    font-size: var(--font-size-48);
   }
 
   .h1-sub {
