@@ -1,14 +1,20 @@
 .container {
   padding: 5% 4rem;
-  max-width: 96rem;
+  /* max-width: 96rem; */
+  background-color: var(--bg-primary);
   /* margin-left: auto; */
   /* margin-right: auto; */
 }
 
 .h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: var(--font-size-68);
-  font-weight: var(--font-bold);
+  font-size: var(--font-size-56);
+  font-weight: var(--font-medium);
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: center;
+  padding: 1.5rem 0;
 }
 
 .h1-sub {

@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </li>
           ))}
         </ul>
-        <div className={styles.set}>
+        {/* <div className={styles.set}>
           <div>
             {project.github_url && (
               <a
@@ -86,7 +86,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </a>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </article>
   );
