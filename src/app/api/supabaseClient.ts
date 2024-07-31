@@ -14,7 +14,10 @@ export async function getAboutData() {
   ] = await Promise.all([
     supabase.from("experiences").select("*"),
     supabase.from("licenses").select("*"),
-    supabase.from("educations").select("*"),
+    supabase
+      .from("educations")
+      .select("*")
+      .order("period", { ascending: false }),
     supabase.from("skills").select("*"),
   ]);
 
