@@ -1,19 +1,30 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { TfiArrowTopRight } from "react-icons/tfi";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000); // 3초 후에 Navbar를 보이게 합니다. 이 시간은 메인 페이지의 로딩 시간과 맞춰야 합니다.
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${isVisible ? styles.visible : styles.hidden}`}
+    >
       <div className={styles["header-container"]}>
         <div className={styles["first-inner"]}>
           <div></div>
@@ -83,6 +94,7 @@ export default function Navbar() {
         <div
           className={`${styles["hamburger-menu"]} ${menuOpen ? styles.open : ""}`}
           onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           <div className={styles["hamburger-icon"]}>
             <span></span>
