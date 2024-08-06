@@ -55,17 +55,17 @@ export default function Navbar() {
         <ul className={`${styles.nav} ${menuOpen ? styles.show : ""}`}>
           <li>
             <a href="#about" className={styles.button}>
-              About
+              <p data-content="About">About</p>
             </a>
           </li>
           <li>
             <a href="#projects" className={styles.button}>
-              projects
+              <p data-content="Projects">Projects</p>
             </a>
           </li>
           <li>
             <a href="#contact" className={styles.button}>
-              contact
+              <p data-content="Contact">Contact</p>
             </a>
           </li>
           <li className={styles["link-item"]}>
